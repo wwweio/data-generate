@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册信息</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>注册信息</h1>
+        <h3>个人信息</h3>
+        <div>
+            <!-- label包含input时，label的for属性不需要填写 -->
+            <label>姓名：<input type="text" placeholder="请输入姓名"></label><br><br>
+            <label>密码：<input type="password" placeholder="请输入密码"></label><br><br>
+            <label>确认密码：<input type="password" placeholder="请输入密码"></label><br><br>
+            性别：
+            <label>
+                <input type="radio">男
+            </label>
+            <label>
+                <input type="radio" checked>女
+            </label>
+            <br><br>
+            城市：
+            <select name="" id="">
+                <option value="">北京</option>
+                <option value="" selected>天津</option>
+                <option value="">上海</option>
+            </select>
+        </div>
+
+
+        <h3>教育经历</h3>
+        最高学历：
+        <select name="" id="">
+            <option value="">博士</option>
+            <option value="" selected>硕士</option>
+            <option value="">学士</option>
+        </select><br><br>
+        <label>学校名称：<input type="text"></label><br><br>
+        <label>所学专业：<input type="text"></label><br><br>
+        在校时间：
+        <select name="" id="">
+            <option value="">2013</option>
+            <option value="">2014</option>
+            <option value="">2015</option>
+        </select>
+        &nbsp;--&nbsp;
+        <select name="" id="">
+            <option value="">2016</option>
+            <option value="">2017</option>
+            <option value="">2018</option>
+        </select>
+        <br><br>
+
+
+        <h3>工作经历</h3>
+        <label>公司名称：<input type="text"></label><br><br>
+        <div>
+            工作描述：
+            <br>
+            <textarea name="" id="" cols="34" rows="10"></textarea>
+        </div>
+
+
+        <div>
+            <input type="checkbox" name="" id="">已阅读并同意一下协议：<br><br>
+            <ul>
+                <li><a href="#">《服务协议</a></li>
+                <li><a href="#">《隐私数据》</a></li>
+            </ul>
+        </div>
+
+        <button type="submit">免费注册</button>
+        <button type="reset">重新填写</button>
+    </form>
+</body>
+
+</html>
