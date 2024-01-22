@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <style>
+        h2 {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+
+        h3 {
+            font-style: italic;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 50px;
+            /* line-height: 2; */
+        }
+
+        .box {
+            /* width: 500px; */
+            background-color: pink;
+            /* 垂直居中（只适用于单行文字）：行高=盒子高度 */
+            line-height: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>帕鲁服务器部署</h2>
+
+    <p>
+        幻兽帕鲁最近在社区呈现了爆火的趋势，在线人数已突破百万级别，官方服务器也开始出现不稳定，卡人闪退的情况。对于有一定财力的小伙伴，搭建一个私人服务器是一个最稳定而舒服的解决方案。本文章将讲解一下如何搭建palworld的私服（专用服务器），如果有不明白的，可以参考官方文档作为补充https://tech.palworldgame.com/dedicated-server-guide，或者在评论区留言，我会耐心解答。
+    </p>
+
+    <h3>安装步骤</h3>
+    <p class="box">总步骤分为三步：准备机器，下载SteamCMD，以及下载PalServer。</p>
+
+    <div>
+        <p>1、准备机器，云服务器标配是4核16G，预算大概300/月，最好用Ubuntu/Debian的机器，有现成的apt安装包，别的操作系统没试过。</p>
+
+        <p>2、SteamCMD 是 Steam 客户端的命令行版本。它的主要用途是使用命令行界面安装和更新Steam上可用的各种专用服务器。</p>
+
+        <p>3、PalServer就是PalWorld私服的启动脚本，运行这个脚本之后，游戏里就能通过地址【云服务器ip:8211】游玩私服。</p>
+    </div>
+
+    
+</body>
+
+</html>
