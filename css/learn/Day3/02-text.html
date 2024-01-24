@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>text</title>
     <style>
+        body {
+            /* background-color: rgba(0, 0, 255, 0.2); 0可以省略*/
+            background-color: rgba(0, 0, 255, .2);
+        }
         div {
             font-size: 30px;
             /* 首行缩进 */
@@ -24,6 +28,21 @@
         .image {
             text-align: center;
         }
+
+        span {
+            text-decoration: underline;
+        }
+
+        .color {
+            /* 十六进制写法 0123456789ABCDEF
+            颜色越靠近0，越黑 */
+            color:#000000;
+            color:#ffffff;
+            color:#ff0000;
+            color:#0000ff;
+            /* 临近2个相同可以简写 */
+            color:#00f;
+        }
     </style>
 </head>
 
@@ -41,6 +60,7 @@
         <img src="https://picsum.photos/300/300" title="随机图像">
     </div>
     
+    <span>装饰线</span>
 </body>
 
 </html>
