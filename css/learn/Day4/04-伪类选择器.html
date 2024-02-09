@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* a {
+            color: #000;
+            text-decoration: none;
+        } */
+
+        /* 以下4个伪类的顺序不能改变 */
+        /* 点击前 */
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        /* 点击后 */
+        a:visited {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* 悬浮 */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* 点击中 */
+        a:active {
+            color: palevioletred;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">GOOGLE一下</a>
+</body>
+</html>
