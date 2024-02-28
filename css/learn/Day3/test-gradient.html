@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试渐变</title>
+    <style>
+        .lg p{
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 80px;
+            margin: 10px;
+            display: inline-block;
+            
+        }
+
+        .lg p:nth-child(1) {
+            background-image: linear-gradient(to right, #ffa500, #f6d365, #fda085);
+            background-clip: text;
+            color: transparent;
+        }
+
+        .lg p:nth-child(2) {
+            background-image: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+
+        .lg p:nth-child(3) {
+            background-image: linear-gradient(135deg, #ff00cc, #ffcc00, #00ffcc, #ff0066);
+        }
+    </style>
+</head>
+<body>
+   <div class="lg">
+    <p>这是一段渐变的文本</p>
+    <p>p2</p>
+    <p>p3</p>
+   </div> 
+</body>
+</html>

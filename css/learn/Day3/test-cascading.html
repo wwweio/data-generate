@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试层叠</title>
+    <style>
+        /* 会显示距离标签近的样式。如果要强制设置，则需要在属性后设置!important */
+        .c1 {
+            color:red !important;
+            color: #000;
+        }
+
+        .c2 {
+            color: #00f;
+            /* 薰衣草色 */
+            color: lavender;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1 c2">
+        这是一个盒子
+    </div>
+</body>
+</html>
