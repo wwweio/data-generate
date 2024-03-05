@@ -21,14 +21,31 @@
             height: 100px;
             background-color: pink;
         }
+
+        /* div {
+            display: inline-block;
+        } */
+        
+        span {
+            /* 行内元素可使用display属性进行转换 
+            display: 
+                block   块级元素 
+                inline  行内元素
+                inline-block 行内块
+            */
+            /* display: block; */
+        }
     </style>
 </head>
 <body>
-    <div class="box1">div1</div>
+    <div class="box1">
+        块级元素
+        <div>块级元素div</div>
+        <p>块级元素p1</p>
+        <p>块级元素p2</p>
+    </div>
     <div class="box2">
-        div2
-        <p>行内元素1</p>
-        <p>行内元素2</p>
+        行内元素
         <span>span1</span>
         <span>span2</span>
     </div>
