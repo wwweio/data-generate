@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签优先级</title>
+    <style>
+        /* 权重：1 */
+        li {
+            color: pink;
+        }
+        /* 权重：1 + 1 = 2*/
+        ul li {
+            color: red;
+        }
+        
+        /* 类标签权重10 */
+        .yellow {
+            color: yellow;
+        }
+        .blue {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: blue !important;
+        }
+
+        li.yellow {
+            color: goldenrod;
+        }
+
+        /* ul.blue {
+            color: palegreen !important;
+        } */
+
+        .nav ul li a {
+            color: black;
+        }
+
+        .nav .weapon {
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="blue">
+        <li class="yellow">一行内容12</li>
+    </ul>
+
+    <div class="nav">
+        <ul>
+            <li><a href="#">灵石</a></li>
+            <li><a href="#" class="weapon">武器</a></li>
+            <li><a href="#">功法</a></li>
+        </ul>
+    </div>
+</body>
+</html>

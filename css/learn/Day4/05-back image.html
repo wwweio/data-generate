@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>background-image</title>
     <style>
-        div {
-            height: 1000px;
-            width: 1000px;
-            color: white;
-            border-color: #000;
-            background-image: url(../../../public/girl.jpeg);
-            background-repeat: repeat-x;
-            background-position: center bottom;
+        .box {
+            /* 基本属性 */
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+
+            /* 字体属性 */
+            color: black;
+            text-align: center;
+
+            /* 背景图属性 */
+            background-image: url(../../../assert/bg-yellow.png);
+            background-repeat: repeat-y;
         }
     </style>
 </head>
 <body>
-    <div>test background-image</div>
+    <div class="box">滕王阁序</div>
 </body>
 </html>
