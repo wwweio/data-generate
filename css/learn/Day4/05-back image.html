@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>background-image</title>
     <style>
+        body {
+            background-image: url(../../../assert/bg/girl.jpeg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            /* background-size: cover; */
+        }
         .box {
             /* 基本属性 */
-            height: 400px;
-            width: 400px;
+            height: 1000px;
+            width: 800px;
             background-color: pink;
 
             /* 字体属性 */
@@ -16,12 +22,91 @@
             text-align: center;
 
             /* 背景图属性 */
-            background-image: url(../../../assert/bg-yellow.png);
-            background-repeat: repeat-y;
+            background-image: url(../../../assert/avators/avator1.png);
+            /* 1.平铺方式：repeat */
+            /* background-repeat: repeat; */
+            /* background-repeat: no-repeat; */
+            /* background-repeat: repeat-x; */
+            background-repeat: no-repeat;
+
+            /* 2.背景位置 */
+            /* 2个元素：水平 垂直 */
+            background-position: center center;
+            background-position: left top;
+            /* background-position: 50px 20px; */
+
+            /* 背景图片缩放 */
+            /* contain保证完整性，cover保证图片铺满整个盒子 */
+            background-size: contain;
+            background-attachment: fixed;
+        }
+
+        p {
+            background-attachment: fixed;
         }
     </style>
 </head>
 <body>
-    <div class="box">滕王阁序</div>
+    <div class="box">image test
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+        <p>this is a p</p>
+    </div>
 </body>
 </html>

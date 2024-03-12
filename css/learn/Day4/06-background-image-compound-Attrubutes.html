@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图复合属性</title>
+    <style>
+        div {
+            height: 1000px;
+            width: 1000px;
+            /* 背景图位置/背景图缩放如果使用复合属性，则必须放在一起写 */
+            background: pink url(../../../assert/avators/avator1.png) no-repeat fixed left center/contain;
+        }
+
+        /* 鼠标经过时更换背景图 */
+        .box:hover {
+            background-image: url(../../../assert/avators/avator2.png);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">compound Attributes</div>
+</body>
+</html> 
