@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视差滚动</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parallax {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: url(../../../assert/bg/girl.jpeg) center/cover no-repeat;
+            background-attachment: fixed;
+            animation: parallaxScroll 10s infinite linear;
+        }
+
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #000;
+        }
+
+        /* @keyframes parallaxScroll {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 0 -100vh;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="parallax-bg"></div>
+    <div class="parallax-content">
+        <h1>Welcome to Parallax Scrolling</h1>
+        <p>This is a demo of parallax scrolling effect using CSS.</p>
+    </div>
+</body>
+
+</html>
