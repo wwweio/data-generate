@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="html的基本标签" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 图片切换 */
+        .container {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        }
+        
+        .sroll-container{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 15px;
+            gap: 12px;
+            scroll-snap-type: x mandatory;
+            overflow: auto;
+        }
+        .container .item{
+            object-fit: cover;
+            width: 0;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            border-radius: 8px;
+        }
+        /* 浮动的placeholder */
+        body{
+            background: #eee;
+        }
+        .input-group{
+            position: relative;
+        }
+        input{
+            padding: 10px;
+            background: #d3edf8;
+            border-radius: 2px;
+            outline: none;
+            color: #444444;
+            border: 1px solid #0da2ff;
+            border-radius: 3px;
+        }
+        .placeholder{
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 14px;
+            padding: 0px 5px;
+            color: #0da2ff;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+        input:focus + .placeholder,
+        input:not(:placeholder-shown) + .placeholder{
+            top: -10px;
+            background-color: #d3edf8;
+        }
+    </style>
+</head>
+<body>
+    <!-- 单标签 -->
+    <!-- <hr>    
+    <br>
+    <hr> -->
+    <!-- 浮动的Placeholder -->
+    <div>
+        <input type="text" class="input" placeholder=" ">
+        <label class="placeholder">name</label>
+    </div>
+
+    <hr>
+    
+    <!-- 图片切换 -->
+    <div class="container">
+        <div class="sroll-container">
+            <img src="../../../assert/bg/bg-blue.jpg" class="item">
+            <img src="../../../assert/bg/bg-yellow.png" class="item">
+            <img src="../../../assert/avators/avator1.png" class="item">
+            <img src="../../../assert/avators/avator2.png" class="item">
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
