@@ -6,6 +6,13 @@
     <title>结构伪类选择器</title>
     <style>
         /* 选择第一个 */
+        /* 选择器公式： n从0开始
+        偶数2n 
+        奇数2n+1 
+        k的倍数  kn  
+        k之后的标签：n+k  
+        k之前的标签  -n+k 
+        */
         ul li:first-child {
             color: greenyellow;
         }
@@ -14,6 +21,9 @@
         }
         ul li:nth-child(5) {
             color: blue;
+        }
+        ul li:nth-child(2n) {
+            background-color: green;
         }
     </style>
 </head>
