@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-elements</title>
+    <style>
+        li {
+            background-color: palevioletred;
+        }
+
+        /* 后缀 */
+        li::after {
+            content: "》》》后缀";
+        }
+
+        /* 前缀 */
+        li::before {
+            content: "前缀《《《";
+        }
+
+        /* 设置首行 */
+        li::first-line {
+            content: "";
+            font-size: 20px;
+        }
+
+        /* 首行的首字母 */
+        li::first-letter {
+            content: "";
+            font-size: 30px;
+        }
+
+        /* 选中的内容变颜色 */
+        li:last-child::selection {
+            content: "最后一个元素";
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机手机</li>
+            <li>电视</li>
+            <li>这是一个电脑</li>
+        </ul>
+    </div>
+</body>
+</html>
