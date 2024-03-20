@@ -10,11 +10,65 @@
             height: 100px;
             background-color: #adf;
 
+            /* 1.边框线 */
             border: 5px dashed #000;
+
+            /* 通过方位展示边框线 层叠性：属性的多次设置,后面的会覆盖前面的*/
+            border-bottom: 8px solid #000;
+            border-right: 3px dotted red;
+            border-right: 3px dotted white;
+            border-right: 3px dotted greenyellow;
+
+            /* 2.内边距 */
+            padding: 10px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            
+            
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 10px dashed greenyellow;
+            margin-top: 10px;
+
+            /* 内边距多值写法 */
+            padding: 10px 30px;
+            padding: 10px 30px 50px 60px;
+
+            /* 增加内边距和边框之后，如何保证盒子大小不变
+                1.宽高手动减去内边距和边框的尺寸
+                2.使用box-sizing属性border-box
+            */
+            box-sizing: border-box;
+
+            /* 3.外边距 */
+            margin: 10px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            
+        
+            /* 居中对齐 */
+            margin: 0 auto;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
     <div class="box">这是一个盒子哦</div>
+    <div class="box1">这也是一个盒子哦</div>
+    <div class="box2">这是另外的盒子哦</div>
 </body>
 </html>
