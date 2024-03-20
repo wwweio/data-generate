@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin-quesations</title>
+    <style>
+        .box1,
+        .box2
+        {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 外边距合并 */
+        .box1 {
+            margin-bottom: 100px;
+        }
+
+        .box2 {
+            background-color: #abf;
+            margin-top: 50px;
+        }
+
+
+        /* 外边距塌陷 */
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 设置子级向下偏移，不完全贴住父级盒子：方法1：给父级盒子设置内边距 */
+
+            /* 防止外边距塌陷的方法： */
+            /* padding-top: 10px; */
+            /* overflow: hidden; */
+            border-top: 1px solid transparent;
+        }
+
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: #abf;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">上box</div>
+    <div class="box2">下box</div>
+
+    <div class="father">
+        <div class="son">子级标签</div>
+    </div>
+</body>
+</html>
