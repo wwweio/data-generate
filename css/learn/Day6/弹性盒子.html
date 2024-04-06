@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 100px;
+            width: 400px;
+            height: 200px;
+            background-color: skyblue;
+
+            /* 1.弹性盒子设置 */
+            display: flex;
+
+            /* 2.弹性盒子元素排列方式 */
+            /* flex-direction: column; */
+
+            /* 3.内容在x轴（主轴）上的对齐方式  flex-start、flex-end、center、space-between、space-around */
+            justify-content: space-around;
+
+            /* 4.内容在y轴上的对齐方式 */
+            align-items: initial;
+
+            flex-wrap: wrap;
+
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">flex1</div>
+        <div class="item">flex2  adfgfdddddddddddddddddddddddddddd</div>
+        <div class="item">flex3</div>
+    </div>
+</body>
+</html>
