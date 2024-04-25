@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跳一跳游戏</title>
+<style>
+    #player {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
+</head>
+<body>
+<div id="player"></div>
+<script>
+    const player = document.getElementById('player');
+    let jumping = false;
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === ' ' && !jumping) {
+            jumping = true;
+            let jumpHeight = 100;
+            let jumpDuration = 500;
+            let startTime = Date.now();
+
+            function jump() {
+                let currentTime = Date.now();
+                let elapsedTime = currentTime - startTime;
+                if (elapsedTime < jumpDuration) {
+                    let progress = (elapsedTime / jumpDuration) * 100;
+                    let jumpDistance = jumpHeight * Math.sin((progress / 100) * Math.PI);
+                    player.style.bottom = jumpDistance + 'px';
+                    requestAnimationFrame(jump);
+                } else {
+                    jumping = false;
+                    player.style.bottom = '0';
+                }
+            }
+
+            jump();
+        }
+    });
+</script>
+</body>
+</html>
