@@ -1,0 +1,14 @@
+.P-List {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(skyblue, pink);
+}
+
+.P-List h3 {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}

@@ -1,5 +1,6 @@
 import { createHashRouter, Navigate } from "react-router-dom";
 import Home from "../pages/home";
+import List from "../pages/list";
 
 export const globalRouters = createHashRouter([
     {
@@ -11,5 +12,9 @@ export const globalRouters = createHashRouter([
     {
         path: '*',
         element: <Navigate to="/Home" />,
+    },
+    {
+        path: '/List',
+        element: <List />,
     },
 ])

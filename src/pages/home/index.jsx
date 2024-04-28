@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import './home.styl';
+// import './home.styl';
+import './home.css';
 
 function Home() {
     const [directories, setDirectories] = useState([]);
@@ -13,7 +14,7 @@ function Home() {
 
     return (
         <div className="P-home">
-            <h1>Practice Directories</h1>
+            <h3>Practice Directories</h3>
             <ul className='ipt-con'>
                 {directories.map((dir, index) => (
                     <li key={index}>

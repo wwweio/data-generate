@@ -1,0 +1,17 @@
+.P-home {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(#f48c8d, #f4c58d);
+}
+.P-home h3 {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+.P-home .ipt-con {
+    margin: 20px auto 0;
+    text-align: center;
+}
