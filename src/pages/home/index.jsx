@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 // import './home.styl';
+import { Button } from 'antd';
 import './home.css';
 
 function Home() {
+    //创建路由钩子
+    const navigate = useNavigate();
     const [directories, setDirectories] = useState([]);
 
     useEffect(() => {
@@ -15,6 +19,9 @@ function Home() {
     return (
         <div className="P-home">
             <h3>Practice Directories</h3>
+            <div className="ipt-con">
+                <Button type="primary" onClick={()=>{navigate('/login')}}>返回登录</Button>
+            </div>
             <ul className='ipt-con'>
                 {directories.map((dir, index) => (
                     <li key={index}>
