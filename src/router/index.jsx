@@ -2,6 +2,7 @@ import { createHashRouter, Navigate } from "react-router-dom";
 import Home from "../pages/home";
 import List from "../pages/list";
 import Login from "../pages/login";
+import UserProfile from "../pages/account";
 
 export const globalRouters = createHashRouter([
     {
@@ -17,6 +18,10 @@ export const globalRouters = createHashRouter([
     {
         path: '*',
         element: <Navigate to="/Home" />,
+    },
+    {
+        path:'/user',
+        element:<UserProfile />,
     },
     {
         path: '/List',
