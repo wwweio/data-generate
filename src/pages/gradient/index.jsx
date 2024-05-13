@@ -1,6 +1,6 @@
 import './list.css';
 
-function List() {
+function Gradient() {
     return (
         <div className="P-List">
             <h3>List Page</h3>
@@ -9,4 +9,4 @@ function List() {
     )
 }
 
-export default List;
+export default Gradient;
