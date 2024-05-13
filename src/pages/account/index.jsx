@@ -1,25 +1,17 @@
-import React from 'react';
-import './UserProfile.css';
-import Header from '@/components/header'
+import { Button } from 'antd'
+import './account.styl'
+import { useNavigate } from 'react-router-dom'
 
-const UserProfile = () => {
-  return (
-    <div>
-      <Header />
-      <div className="profile-header">
-        <img src="https://via.placeholder.com/150" alt="User Avatar" />
-        <h1>User Name</h1>
-        <p>User Bio</p>
-      </div>
-      <div className="profile-details">
-        <p>Name: John Doe</p>
-        <p>Email: johndoe@example.com</p>
-        <p>Age: 30</p>
-        <p>Address: 123 Main St, City, State</p>
-      </div>
-      <button>Edit Profile</button>
-    </div>
-  );
+function Account() {
+    const navigate = useNavigate();
+    return (
+        <div className="P-account">
+            <h1>Account Page</h1>
+            <div className="ipt-con">
+                <Button type="primary" onClick={()=>{navigate('/login')}}>返回登录</Button>
+            </div>
+        </div>
+    )
 }
 
-export default UserProfile;
+export default Account

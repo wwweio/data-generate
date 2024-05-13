@@ -21,6 +21,11 @@
     font-weight: bold;
 }
 
+.M-header .header-wrapper .menu-con {
+    width: 300px;
+    margin-left: 20px;
+}
+
 .M-header .header-wrapper .opt-con {
     display: flex;
     flex: 1;

@@ -1,10 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-// import './home.styl';
 import { Button } from 'antd';
 import { goto } from '@/api';
 import './home.css';
-import Header from '@/components/header'
 
 function Home() {
     //创建路由钩子
@@ -20,7 +18,6 @@ function Home() {
 
     return (
         <div className="P-home">
-            <Header />
             <h3>Practice Directories</h3>
             <div className="ipt-con">
                     <Button onClick={()=>{goto('/login')}}>组件外跳转</Button>
