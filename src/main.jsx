@@ -7,12 +7,17 @@ import '@/common/styles/frame.styl'
 //引入antd 中文包
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/locale/zh_CN.js'
+// 引入全局配置
+import { store } from '@/store'
+import { Provider } from 'react-redux'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ConfigProvider locale={zhCN}>
-      {/* 增加路由配置 */}
-      <RouterProvider router={globalRouters} />
-    </ConfigProvider>
+    <Provider store={store}>
+      <ConfigProvider locale={zhCN}>
+        {/* 增加路由配置 */}
+        <RouterProvider router={globalRouters} />
+      </ConfigProvider>
+    </Provider>
   </React.StrictMode>,
 )
