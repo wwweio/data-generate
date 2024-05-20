@@ -19,6 +19,13 @@ let antdTheme = {
     algorithm: globalTheme.dark ? darkAlgorithm : defaultAlgorithm,
 }
 
+// 应用主题色
+if(globalTheme.colorPrimary) {
+    antdTheme.token = {
+        colorPrimary: globalTheme.colorPrimary,
+    }
+}
+
   return (
     <ConfigProvider theme={antdTheme}>
       <div className="M-entry">

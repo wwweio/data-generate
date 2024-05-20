@@ -1,4 +1,5 @@
 import { Button, Card, Menu } from 'antd'
+import { useState } from 'react'
 // 新增太阳图表
 import { MoonOutlined, ThemeOutlined, SunOutlined } from '@/components/extraIcons'
 import './header.css'
@@ -8,6 +9,8 @@ import { HomeOutlined, UserOutlined } from '@ant-design/icons'
 import { useSelector, useDispatch } from 'react-redux'
 // 引入主题换肤功能
 import { setDark } from '@/store/slices/theme'
+import ThemeModal from '@/components/themeModal'
+import { globalConfig } from '@/globalConfig'
 
 function Header() {
     // 创建路由钩子
@@ -41,6 +44,9 @@ function Header() {
     // 获取store中的主题配置
     const theme = useSelector((state) => state.theme)
 
+    // 是否显示主题颜色对话框
+    const [showThemeModal, setShowThemeModal] = useState(false)
+
     return (
         <Card className="M-header">
             <div className="header-wrapper">
@@ -68,9 +74,32 @@ function Header() {
                             ></Button>
                         )
                     }
-                    <Button icon={<ThemeOutlined />} shape="circle"></Button>
+                    {
+                          // 当globalConfig配置了主题色，并且数量大于0时，才显示主题色换肤按钮
+                          globalConfig.customColorPrimarys &&
+                              globalConfig.customColorPrimarys.length > 0 && (
+                                  <Button
+                                      icon={<ThemeOutlined />}
+                                      shape="circle"
+                                      onClick={() => {
+                                          setShowThemeModal(true)
+                                      }}
+                                  ></Button>
+                              )
+                      }
+
                 </div>
             </div>
+            {
+                // 显示主题颜色对话框
+                showThemeModal && (
+                    <ThemeModal 
+                        onClose={() => {
+                            setShowThemeModal(false)
+                        }}
+                    />
+                )
+            }
         </Card>
     )
 }
