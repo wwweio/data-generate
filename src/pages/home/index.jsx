@@ -1,13 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import { Button } from 'antd';
+import { Button, theme } from 'antd';
 import { goto } from '@/api';
 import './home.css';
+
+const { useToken } = theme
 
 function Home() {
     //创建路由钩子
     const navigate = useNavigate();
     const [directories, setDirectories] = useState([]);
+
+    // 获取antd的design token
+    const {token} = useToken()
 
     useEffect(() => {
         fetch('/directories.json')
@@ -18,7 +23,7 @@ function Home() {
 
     return (
         <div className="P-home">
-            <h3>Practice Directories</h3>
+            <h3 style={{color: token.colorText}}>Practice Directories</h3>
             <div className="ipt-con">
                     <Button onClick={()=>{goto('/login')}}>组件外跳转</Button>
             </div>
