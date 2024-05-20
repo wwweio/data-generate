@@ -10,6 +10,7 @@ import zhCN from 'antd/locale/zh_CN.js'
 // 引入全局配置
 import { store } from '@/store'
 import { Provider } from 'react-redux'
+import './mock'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
